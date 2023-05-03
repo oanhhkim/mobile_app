@@ -15,7 +15,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#FF6D00"
         android:orientation="vertical"
         android:padding="5dp"
         android:scrollHorizontally="true">
@@ -28,7 +27,7 @@
             android:layout_marginTop="20dp"
             android:scrollHorizontally="true"
             android:text="SỬA ĐIỂM"
-            android:textColor="#FFFFFF"
+            android:textColor="#D95D5D"
             android:textSize="30dp"
             android:textStyle="bold" />
 
@@ -42,10 +41,9 @@
             android:layout_marginBottom="10dp"
             android:background="#FFFFFF"
             android:ems="10"
-            android:hint="Nhập ĐIỂM"
+            android:hint="Nhập điểm"
             android:inputType="number"
-            android:padding="10dp"
-            android:textColorHint="#00BCD4" />
+            android:padding="10dp"/>
 
 
         <LinearLayout
@@ -65,7 +63,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
-                android:background="@drawable/bt_ui_intro"
+                android:background="@drawable/bg_save"
                 android:text="CẬP NHẬT"
                 android:textColor="#FFFFFF"
                 android:textStyle="bold" />
@@ -77,7 +75,7 @@
                 android:layout_marginBottom="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/bt_ui_intro"
-                android:text="HỦY BỎ"
+                android:text="HỦY"
                 android:textColor="#FFFFFF"
                 android:textStyle="bold" />
         </LinearLayout>

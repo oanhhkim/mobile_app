@@ -2,14 +2,14 @@
 <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#2196F3"
+    android:background="#D95D5D"
     android:orientation="vertical">
 
-    <ImageView
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginLeft="5dp"
-        android:background="@drawable/taynguyen" />
+<!--    <ImageView-->
+<!--        android:layout_width="40dp"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:layout_marginLeft="5dp"-->
+<!--        android:background="@drawable/taynguyen" />-->
 
     <TextView
         android:layout_width="wrap_content"
@@ -18,6 +18,7 @@
         android:text="Quản lý sinh viên"
         android:textAllCaps="true"
         android:textColor="#FFFFFF"
+        android:layout_gravity="center_horizontal"
         android:textSize="20dp"
         android:textStyle="bold" />
 
