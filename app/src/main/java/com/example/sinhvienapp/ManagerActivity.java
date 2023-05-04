@@ -184,7 +184,7 @@ public class ManagerActivity extends AppCompatActivity  {
             @Override
             public void onClick(View v) {
                 Intent myWebLink = new Intent(android.content.Intent.ACTION_VIEW);
-                myWebLink.setData(Uri.parse("https://www.ttn.edu.vn/"));
+                myWebLink.setData(Uri.parse("https://portal.ptit.edu.vn/"));
                 startActivity(myWebLink);
             }
         });
@@ -192,7 +192,7 @@ public class ManagerActivity extends AppCompatActivity  {
             @Override
             public void onClick(View v) {
                 Intent myWebLink = new Intent(android.content.Intent.ACTION_VIEW);
-                myWebLink.setData(Uri.parse("https://www.ttn.edu.vn/"));
+                myWebLink.setData(Uri.parse("https://portal.ptit.edu.vn/"));
                 startActivity(myWebLink);
             }
         });

@@ -2,7 +2,7 @@
 <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#2196F3"
+    android:background="#D95D5D"
     android:orientation="vertical">
 
     <ImageView
@@ -15,7 +15,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:text="LỊCH SỰ KIỆN THÁNG 5 "
+        android:text="LỊCH SỰ KIỆN "
         android:textColor="#FFFFFF"
         android:textSize="20dp"
         android:textStyle="bold" />
