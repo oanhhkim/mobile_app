@@ -81,6 +81,7 @@ public class ThongTinDiem extends AppCompatActivity {
                         if(diemDAO.insert(new DiemDTO(sinhVien.getMaSv(),monHoc.getMaMH(),diem))){
                             Toast.makeText(ThongTinDiem.this,"Thêm điểm thành công",Toast.LENGTH_SHORT).show();
                             diemAdapter.reset(diemDAO.getAll(sinhVien.getMaSv()));
+
                         }else{
                             Toast.makeText(ThongTinDiem.this,"Môn học này đã tồn tại",Toast.LENGTH_SHORT).show();
                         }

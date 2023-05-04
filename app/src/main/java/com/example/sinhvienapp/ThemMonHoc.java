@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.example.sinhvienapp.adapter.MonHocAdapter;
 import com.example.sinhvienapp.dao.MonHocDao;
 import com.example.sinhvienapp.model.MonHoc;
 
@@ -56,9 +57,12 @@ public class ThemMonHoc extends AppCompatActivity {
                 }else {
                     MonHoc monHoc = new MonHoc(ma, ten);
                     if (monHocDao.insert(monHoc)) {
-                        Toast.makeText(ThemMonHoc.this, "Them thanh cong", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ThemMonHoc.this, "Thêm thành công", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(ThemMonHoc.this, DanhSachMonHoc.class);
+                        startActivity(intent);
+                        finish();
                     } else {
-                        Toast.makeText(ThemMonHoc.this, "Them that bai", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ThemMonHoc.this, "Thêm không thành công", Toast.LENGTH_SHORT).show();
                     }
                 }
 

@@ -64,7 +64,6 @@ public class SinhVienDao {
         contentValues.put("maLop", s.getMaLop());
         contentValues.put("maChuyenNganh", s.getMaChuyenNganh());
         long r = db.update("SINHVIEN", contentValues, "maSv=?", new String[]{s.getMaSv()});
-
         return r > 0;
     }
 

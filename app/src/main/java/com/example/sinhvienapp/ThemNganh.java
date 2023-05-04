@@ -56,6 +56,9 @@ public class ThemNganh extends AppCompatActivity {
                     ChuyenNganh chuyenNganh = new ChuyenNganh(ma, ten);
                     if (chuyenNganhDao.insert(chuyenNganh)) {
                         Toast.makeText(ThemNganh.this, "Them thanh cong", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(ThemNganh.this, DanhSachChuyenNganh.class);
+                        startActivity(intent);
+                        finish();
                     } else {
                         Toast.makeText(ThemNganh.this, "Them that bai", Toast.LENGTH_SHORT).show();
                     }

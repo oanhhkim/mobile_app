@@ -58,6 +58,9 @@ public class ThemLopActivity extends AppCompatActivity {
                     Lop lop = new Lop(malop, tenlop);
                     if (lopDao.insert(lop)) {
                         Toast.makeText(ThemLopActivity.this, "Them thanh cong", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(ThemLopActivity.this, DanhSachLopActivity.class);
+                        startActivity(intent);
+                        finish();
                     } else {
                         Toast.makeText(ThemLopActivity.this, "Them that bai", Toast.LENGTH_SHORT).show();
                     }
