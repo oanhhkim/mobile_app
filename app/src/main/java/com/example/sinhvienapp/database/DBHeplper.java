@@ -17,30 +17,28 @@ public class DBHeplper extends SQLiteOpenHelper {
         //tạo table lớp
         String sql = " CREATE TABLE LOP(maLop TEXT PRIMARY KEY, tenLop TEXT)";
         db.execSQL(sql);
-        sql = " INSERT INTO LOP VALUES ('Android','Lap Trinh Android')";
+        sql = " INSERT INTO LOP VALUES ('CNPM01','Công nghệ phần mềm 01')";
         db.execSQL(sql);
-        sql = " INSERT INTO LOP VALUES ('Kinhte','Kinh te')";
+        sql = " INSERT INTO LOP VALUES ('CNPM02','Công nghệ phần mềm 02')";
         db.execSQL(sql);
-        sql = " INSERT INTO LOP VALUES ('Toan','Toan Cao Cap')";
+        sql = " INSERT INTO LOP VALUES ('CNPM03','Công nghệ phần mềm 03')";
         db.execSQL(sql);
 
         //tạo table chuyên ngành
         sql = " CREATE TABLE CHUYENNGANH(maChuyenNganh TEXT PRIMARY KEY, tenChuyenNganh TEXT)";
         db.execSQL(sql);
-        sql = " INSERT INTO CHUYENNGANH VALUES ('KHMT','Khoa hoc may tinh')";
+        sql = " INSERT INTO CHUYENNGANH VALUES ('ATTT','An toàn thông tin')";
         db.execSQL(sql);
-        sql = " INSERT INTO CHUYENNGANH VALUES ('CNPM','Cong nghe phan mem')";
+        sql = " INSERT INTO CHUYENNGANH VALUES ('CNPM','Công nghệ phần mềm')";
         db.execSQL(sql);
-        sql = " INSERT INTO CHUYENNGANH VALUES ('KETOAN','Ke toan')";
+        sql = " INSERT INTO CHUYENNGANH VALUES ('HTTT','Hệ thống thông tin')";
         db.execSQL(sql);
         //tạo table môn học
         sql = " CREATE TABLE MONHOC(maMH TEXT PRIMARY KEY, tenmonhoc TEXT)";
         db.execSQL(sql);
-        sql = " INSERT INTO MONHOC VALUES ('TIN1001','Lap trinh OOP')";
+        sql = " INSERT INTO MONHOC VALUES ('INT1449','Phát triển ứng dụng cho các thiết bị di động')";
         db.execSQL(sql);
-        sql = " INSERT INTO MONHOC VALUES ('TIN1022','Ky nghe phan mem')";
-        db.execSQL(sql);
-        sql = " INSERT INTO MONHOC VALUES ('TIN2222','Do hoa may tinh')";
+        sql = " INSERT INTO MONHOC VALUES ('INT1408','Chuyên đề công nghệ phần mềm')";
         db.execSQL(sql);
         //tao table calendar event
         sql = "CREATE TABLE EventCalendar(Date TEXT, Event TEXT)";
@@ -49,11 +47,7 @@ public class DBHeplper extends SQLiteOpenHelper {
         sql = " CREATE TABLE SINHVIEN(maSv TEXT PRIMARY KEY, tenSV TEXT ," +
                 " email TEXT ,hinh TEXT, maLop TEXT REFERENCES LOP(maLop), maChuyenNganh TEXT REFERENCES CHUYENNGANH(maChuyenNganh)) ";
         db.execSQL(sql);
-        sql = " INSERT INTO SINHVIEN VALUES ('2013483','Nguyen Van A','nguyenvan@gmail.com','avatasinhvien','Android','KHMT')";
-        db.execSQL(sql);
-        sql = " INSERT INTO SINHVIEN VALUES ('2098765432','Nguyen Van A','nguyenvanb@gmail.com','avatasinhvien','Kinhte','KETOAN')";
-        db.execSQL(sql);
-        sql = " INSERT INTO SINHVIEN VALUES ('234567890','Nguyen Thi C','c@gmail.com','avatamacdinh','Toan','KHMT')";
+        sql = " INSERT INTO SINHVIEN VALUES ('B19DCCN493','Đỗ Thị Kim Oanh','oanhhkim@gmail.com','avatasinhvien','CNPM01','CNPM')";
         db.execSQL(sql);
         //tạo table taikhoan
         sql = "CREATE TABLE taiKhoan(tenTaiKhoan text primary key, matKhau text)";

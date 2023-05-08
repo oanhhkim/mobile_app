@@ -57,10 +57,10 @@ public class Calendar extends AppCompatActivity {
             public void onDayClick(Date dateClicked) {
                 Context context = getApplicationContext();
 
-                if (dateClicked.toString().compareTo("Sun Jul 11 00:00:00 GMT+07:00 2021") == 0) {
+                if (dateClicked.toString().compareTo("Thur May 11 00:00:00 GMT+07:00 2023") == 1) {
                     Toast.makeText(context, "Teachers' Professional Day", Toast.LENGTH_SHORT).show();
-                }else if (dateClicked.toString().compareTo("Sat Jul 10 00:00:00 GMT+07:00 2021") == 0) {
-                    Toast.makeText(context, "Tônge kết báo cáo", Toast.LENGTH_SHORT).show();
+                }else if (dateClicked.toString().compareTo("Fri May 12 00:00:00 GMT+07:00 2023") == 1) {
+                    Toast.makeText(context, "Tổng kết báo cáo", Toast.LENGTH_SHORT).show();
 
                 }
                 else if (dateClicked.toString().compareTo("Sat Jul 17 00:00:00 GMT+07:00 2021") == 0) {

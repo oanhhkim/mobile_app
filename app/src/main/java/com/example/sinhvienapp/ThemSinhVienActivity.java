@@ -15,19 +15,21 @@ import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.sinhvienapp.adapter.SinhVienAdapter;
 import com.example.sinhvienapp.dao.ChuyenNganhDao;
 import com.example.sinhvienapp.dao.LopDao;
 import com.example.sinhvienapp.dao.SinhVienDao;
 import com.example.sinhvienapp.model.ChuyenNganh;
 import com.example.sinhvienapp.model.Lop;
 import com.example.sinhvienapp.model.SinhVien;
+
 import java.util.ArrayList;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class ThemSinhVienActivity extends AppCompatActivity {
     EditText edtTensv, edtMasv, edtemail, edtHinh;
-    Spinner spMaLop,spMaNganh;
+    Spinner spMaLop, spMaNganh;
     Button btnThem, btnNhapLai, btnDanhSach, btnReview;
     SinhVienDao daoSach;
     LopDao lsDao;
@@ -94,11 +96,11 @@ public class ThemSinhVienActivity extends AppCompatActivity {
         btnReview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-              if(edtHinh.getText().toString().equalsIgnoreCase("")){
-                  imgAvata.setImageResource(R.drawable.avatasinhvien);
-              }else if(edtHinh.getText().toString()!=""){
-                  int id_hinh = ((Activity)ThemSinhVienActivity.this).getResources().getIdentifier(edtHinh.getText().toString(), "drawable", ((Activity) ThemSinhVienActivity.this).getPackageName());
-                  imgAvata.setImageResource(id_hinh);
+                if (edtHinh.getText().toString().equalsIgnoreCase("")) {
+                    imgAvata.setImageResource(R.drawable.avatasinhvien);
+                } else if (edtHinh.getText().toString() != "") {
+                    int id_hinh = ((Activity) ThemSinhVienActivity.this).getResources().getIdentifier(edtHinh.getText().toString(), "drawable", ((Activity) ThemSinhVienActivity.this).getPackageName());
+                    imgAvata.setImageResource(id_hinh);
                 }
             }
         });
@@ -128,9 +130,10 @@ public class ThemSinhVienActivity extends AppCompatActivity {
                     } else if (hinh.equals("")) {
                         edtHinh.setText("avatamacdinh");
                     } else {
-                        SinhVien s = new SinhVien(ma, ten, email, hinh, maLop,manganh);
+                        SinhVien s = new SinhVien(ma, ten, email, hinh, maLop, manganh);
                         if (daoSach.insert(s)) {
                             Toast.makeText(ThemSinhVienActivity.this, "Thêm thành công", Toast.LENGTH_LONG).show();
+                            finish();
 
                         } else {
                             Toast.makeText(ThemSinhVienActivity.this, " Không được trùng mã sinh viên ", Toast.LENGTH_LONG).show();

@@ -300,13 +300,13 @@ public class SinhVienAdapter extends BaseAdapter implements Filterable {
 
                 final AlertDialog.Builder builder = new AlertDialog.Builder(context);
                 builder.setTitle("Thông báo");
-                builder.setMessage("Bạn có chắc chắn xóa sinh viên " + s.getTenSv() + " không ?");
+                builder.setMessage("Bạn có chắc chắn xóa sinh viên " + s.getTenSv() + " không?");
                 final SinhVien s = ds.get(position);
                 builder.setNegativeButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         if (sinhVienDao.delete(s)) {
-                            Toast.makeText(context, "Xoa thành công!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(context, "Xóa thành công!", Toast.LENGTH_SHORT).show();
                             ds.clear();
                             ds.addAll(sinhVienDao.getALL());
                             notifyDataSetChanged();

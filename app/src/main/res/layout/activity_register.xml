@@ -39,6 +39,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
             android:orientation="vertical">
 
             <TextView
@@ -54,8 +55,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nhập tên tài khoản "
                 android:drawableRight="@drawable/user"
+                android:text="Nhập tên tài khoản "
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="14sp"
                 android:textStyle="bold" />
@@ -70,8 +71,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
-                android:text="Nhập mật khẩu "
                 android:drawableRight="@drawable/key"
+                android:text="Nhập mật khẩu "
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="14sp"
                 android:textStyle="bold" />
@@ -96,8 +97,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nhập lại mật khẩu "
                 android:drawableRight="@drawable/key"
+                android:text="Nhập lại mật khẩu "
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="14sp"
                 android:textStyle="bold" />
@@ -116,6 +117,7 @@
                     android:inputType="textPassword" />
 
             </com.google.android.material.textfield.TextInputLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -130,14 +132,14 @@
                     android:layout_marginRight="10dp"
                     android:layout_weight="1"
                     android:background="@drawable/bg_save"
-                    android:text="ĐĂNG KÝ"
-                    android:textSize="16dp"
                     android:shadowColor="#0022A8"
                     android:shadowDx="-1"
                     android:shadowDy="-5"
                     android:shadowRadius="15"
+                    android:text="ĐĂNG KÝ"
                     android:textAllCaps="false"
-                    android:textColor="@color/colorWhite" />
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16dp" />
 
                 <Button
                     android:id="@+id/btnRelay"
@@ -145,14 +147,14 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@drawable/bg_exit"
-                    android:text="NHẬP LẠI"
-                    android:textSize="16dp"
                     android:shadowColor="#0022A8"
                     android:shadowDx="-1"
                     android:shadowDy="-5"
                     android:shadowRadius="15"
+                    android:text="NHẬP LẠI"
                     android:textAllCaps="false"
-                    android:textColor="@color/colorWhite" />
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16dp" />
             </LinearLayout>
         </LinearLayout>
 
